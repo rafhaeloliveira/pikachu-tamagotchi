@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red-pokedex: #dc202d;
+  --black-display: #232323;
+  --white-display: #dedede;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--red-pokedex);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
