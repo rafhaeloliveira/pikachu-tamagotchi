@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 // Pixel art em css gerada via: https://www.pixelartcss.com/
+import './faces-css/sleep.scss';
 import './faces-css/talk.scss';
 import './faces-css/common.scss';
 import './faces-css/default.scss'
@@ -10,7 +11,7 @@ export const PikachuFaces = (props: any) => {
   const [animate, setAnimate] = useState('dafault');
 
   useEffect(() => {
-    animateTalk();
+    animateSleep();
   }, [])
 
   // Animação de conversa
@@ -29,6 +30,20 @@ export const PikachuFaces = (props: any) => {
     }, 1000)
   }
 
+  const animateSleep = () => {
+    let frame = 0;
+    let order = 'up'
+
+    setInterval(() => {
+      frame = order === 'up' ? frame+1 : frame-1;
+
+      if (frame === 1 || frame === 0) {
+        order = frame === 1 ? 'down' : 'up'
+      }
+
+      setAnimate(`sleep-${frame}`);
+    }, 1000)
+  }
 
   return (
     <>
