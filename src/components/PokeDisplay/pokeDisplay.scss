@@ -1,6 +1,6 @@
 .pokedex-display {
   width: 320px;
-  height: 250px;
+  height: 260px;
 
   border-radius: 5px;
   background-color: var(--white-display);
@@ -42,4 +42,11 @@
 
   position: relative;
   z-index: 1;
+}
+
+.pokedex-btn-container {
+  width: calc(100% - 50px);
+  height: 30px;
+  
+  padding: 0 10px;
 }
