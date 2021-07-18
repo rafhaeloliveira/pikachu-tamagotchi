@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-// faces
+// Pixel art em css gerada via: https://www.pixelartcss.com/
 import './faces-css/talk.scss';
 import './faces-css/common.scss';
 import './faces-css/default.scss'
